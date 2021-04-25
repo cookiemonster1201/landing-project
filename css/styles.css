@@ -1,0 +1,360 @@
+/* шрифт: 'Work Sans', sans-serif */
+/* цвет основного шрифта: #070707; */
+/* цвет вторичного шрифта: #828282*/
+/* цвет основного фона: #fff */
+/* цвет вторичного фона: #f6f6f6 */
+
+:root {
+  --primary-font: "Work Sans", sans-serif;
+  --primary-font-color: #070707;
+  --secondary-font-color: #828282;
+  --primary-background-color: #fff;
+  --secondary-background-color: #f6f6f6;
+}
+
+body {
+  font-family: var(--primary-font);
+  color: var(--primary-font-color);
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+}
+
+.address {
+  font-style: normal;
+}
+
+/* ===============================компоненты */
+.container {
+  max-width: 970px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-title {
+  font-size: 34px;
+  line-height: 1.2;
+  text-align: center;
+  color: var(--primary-font-color);
+}
+
+/* =================================шапка */
+.header {
+  background-color: var(--primary-background-color);
+}
+
+.header-nav__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-nav__link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.2;
+  color: var(--secondary-font-color);
+}
+
+.header-nav__link:hover,
+.header-nav__link:focus {
+  color: var(--primary-font-color);
+}
+
+.active-page {
+  color: var(--primary-font-color);
+}
+
+.header__nav::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: var(--secondary-font-color);
+}
+
+/* ======================================герой */
+.hero {
+  padding-top: 40px;
+  padding-bottom: 105px;
+  background-color: var(--primary-background-color);
+}
+
+.hero-top {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+  margin-bottom: 50px;
+}
+
+.hero-name {
+  font-size: 47px;
+  line-height: 1.2;
+  color: var(--primary-font-color);
+}
+
+.hero-about {
+  margin-left: 290px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2;
+  color: var(--primary-font-color);
+}
+
+.hero-lang-menu {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  transform: rotate(-90deg) translateX(100%);
+  transform-origin: right bottom;
+}
+
+.hero-lang-menu__item:first-child::after {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 3px;
+  background-color: var(--primary-font-color);
+  transform: rotate(90deg);
+}
+
+.hero-lang-menu__item:first-child {
+  display: flex;
+  align-items: center;
+}
+
+.hero-lang-menu__link {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.2;
+  color: var(--secondary-font-color);
+}
+
+.hero-lang-menu__link.active-language {
+  color: var(--primary-font-color);
+}
+
+/* ==================================обо мне */
+.about {
+  padding-top: 120px;
+  padding-bottom: 107px;
+  background-color: var(--secondary-background-color);
+}
+
+.about .section-title {
+  margin-bottom: 18px;
+}
+
+.about-info {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  max-width: 480px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+}
+/* =================================технические навыки */
+
+.tech-skills {
+  padding-top: 90px;
+  padding-bottom: 110px;
+  background-color: var(--primary-background-color);
+}
+
+.tech-skills .section-title {
+  margin-bottom: 70px;
+}
+
+.tech-skills__info {
+  margin-bottom: 84px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2;
+  text-align: center;
+  color: var(--primary-font-color);
+}
+
+.tech-skills__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tech-skills__item + .tech-skills__item {
+  margin-left: 90px;
+}
+
+.tech-skills__item {
+  min-width: 166px;
+}
+
+.tech-skills__icon {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 24px;
+}
+
+.tech-skills__link {
+  display: block;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+  color: var(--secondary-font-color);
+  transform: scale(1);
+  transition: transform 250ms linear;
+}
+
+.tech-skills__link:hover {
+  transform: scale(1.2);
+}
+.tech-skills-stars__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon-star.no-fill {
+  fill: #e5e5e5;
+}
+
+/* ===========================портфолио */
+.portfolio {
+  padding-top: 112px;
+  padding-bottom: 96px;
+  background-color: var(--secondary-background-color);
+}
+
+.portfolio .section-title {
+  margin-bottom: 48px;
+}
+
+.projects__list-item:not(:last-child) {
+  margin-bottom: 100px;
+}
+
+.projects__img {
+  margin-bottom: 44px;
+}
+
+.projects__link {
+  display: block;
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2;
+  text-decoration-line: underline;
+  color: var(--primary-font-color);
+  transition: color 250ms linear;
+}
+
+.projects__link:hover,
+.projects__link:focus {
+  color: var(--secondary-font-color);
+}
+
+/* подвал */
+
+.footer {
+  margin-top: 114px;
+  margin-bottom: 122px;
+  background-color: var(--primary-background-color);
+}
+
+.footer-title {
+  margin-bottom: 20px;
+  font-size: 34px;
+  line-height: 1.2;
+  text-align: center;
+  color: var(--primary-font-color);
+}
+
+.invitation {
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  font-size: 18px;
+  line-height: 1.2;
+  text-align: center;
+  color: var(--primary-font-color);
+}
+
+.message-button {
+  display: block;
+  min-width: 180px;
+  padding: 12px 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 86px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.2;
+  color: var(--primary-background-color);
+  cursor: pointer;
+  background-color: var(--primary-font-color);
+  border: none;
+  border-radius: 25px;
+  transition: background 250ms linear;
+}
+
+.message-button:hover,
+.message-button:focus {
+  background-color: var(--secondary-font-color);
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 46px;
+}
+
+.social__list-item + .social__list-item {
+  margin-left: 62px;
+}
+
+.appeal {
+  text-align: center;
+}
+
+.social__icon {
+  transition: fill 250ms linear;
+}
+.social__link:hover .social__icon,
+.social__link:focus .social__icon {
+  fill: var(--secondary-font-color);
+}
